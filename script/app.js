@@ -6,6 +6,29 @@ $(document).ready(() => {
   } else if ($(window).width() > 1000) {
     $('.scroll-area').scrollLeft(200)
   }
+
+  if (
+    $(window).height() > $(window).width() / 1.4 ||
+    $(window).width() > 1500
+  ) {
+    $('.calculate-height').css(
+      'height',
+      `calc(100vh - ${$('.about-footer')[0]?.scrollHeight}px)`,
+    )
+  }
+  $(window).resize(() => {
+    if (
+      $(window).height() > $(window).width() / 1.4 ||
+      $(window).width() > 1500
+    ) {
+      $('.calculate-height').css(
+        'height',
+        `calc(100vh - ${$('.about-footer')[0]?.scrollHeight}px)`,
+      )
+    } else {
+      $('.calculate-height').css('height', 'auto')
+    }
+  })
 })
 //   $('.scroll-area').on('scroll', () => {
 //     if ($(document).scrollTop() === 0 && $('.scroll-area').scrollTop() !== 0) {
