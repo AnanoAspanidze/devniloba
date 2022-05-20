@@ -95,11 +95,88 @@ html {
 header {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 20px 80px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.56) 0%, transparent 100%);
   z-index: 99999;
+  position: relative;
+}
+header .nav-container nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  align-items: flex-start;
+  position: relative;
+}
+header .nav-container nav ul li {
+  background: #0e141b;
+  padding: 20px 30px;
+  height: 58px;
+  background-color: rgb(38, 43, 50);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  cursor: pointer;
+}
+header .nav-container nav ul li a {
+  color: rgb(110, 111, 113);
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 200;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+}
+header .nav-container nav ul li a .fa-arrow-down {
+  transition: color 0.2s ease-out, transform 0.2s ease-in-out;
+}
+header .nav-container nav ul li:hover a .fa-arrow-down {
+  transform: rotateZ(180deg);
+}
+header .nav-container nav ul li:hover a:active {
+  color: rgb(0, 75, 255) !important;
+}
+header .nav-container nav ul li:hover :first-child {
+  color: white;
+}
+header .nav-container nav ul .clickable li {
+  color: rgb(110, 111, 113);
+  color: rgb(110, 111, 113);
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+header .nav-container nav ul .clickable:active li {
+  color: rgb(0, 75, 255) !important;
+}
+header .nav-container nav ul .clickable:hover li {
+  color: white;
+}
+header .nav-container nav ul .expandable-stories {
+  left: -15px;
+  transform: translateX(-100%);
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+header .nav-container nav ul .expandable-stories a:not(:first-child) {
+  margin-block: 7px;
+}
+header .nav-container nav ul .expandable-stories a:nth-child(2) {
+  margin-top: 20px;
+}
+header .nav-container nav ul .expandable-stories a:hover:not(:first-child) {
+  color: white;
+}
+header .nav-container nav ul .expandable-stories:hover {
+  height: 216px;
 }
 
 footer {
@@ -126,7 +203,7 @@ footer .footer-nav ul li a {
   transition: color 0.3s ease-in-out;
 }
 footer .footer-nav ul li a:hover {
-  color: #0f0f0f;
+  color: rgb(0, 75, 255);
 }
 footer p {
   font-family: "Montserrat", sans-serif;
@@ -179,7 +256,7 @@ footer p {
   bottom: 30px;
   gap: 17px;
 }
-.intro-page-body .see-more a {
+.intro-page-body .see-more p {
   font-family: "Archivo-Black";
   font-size: 1.25rem;
   color: white;
@@ -252,7 +329,7 @@ footer p {
   height: auto;
   bottom: 30%;
   left: 5%;
-  animation-delay: 10s;
+  animation-delay: 12s;
 }
 .intro-page-body .photo-spawner .fisheye {
   z-index: 6;
@@ -265,39 +342,6 @@ footer p {
 
 .stories-page-body {
   background-color: rgb(236, 236, 236);
-}
-.stories-page-body .nav-container nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-.stories-page-body .nav-container nav ul li {
-  background: #0e141b;
-  padding: 20px 30px;
-  background-color: rgb(38, 43, 50);
-  border: 1px solid #262b32;
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25);
-  border-radius: 72px;
-}
-.stories-page-body .nav-container nav ul li a {
-  color: #fff;
-  font-family: Helvetica, sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  font-weight: 200;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.stories-page-body .nav-container nav ul li a .fa-arrow-down {
-  transition: 0.2s ease-in-out;
-}
-.stories-page-body .nav-container nav ul li:hover a .fa-arrow-down {
-  transform: rotateZ(180deg);
 }
 .stories-page-body .canvas {
   width: 100vw;
