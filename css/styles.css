@@ -150,8 +150,16 @@ footer p {
   flex-direction: column;
   justify-content: center;
   gap: 30px;
+  opacity: 0;
   align-items: center;
   padding: 50px 25%;
+  animation: opacity-0-to-1 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation: opacity-0-to-1 2s;
+  -webkit-animation: opacity-0-to-1 2s;
+  -webkit-animation-fill-mode: forwards;
 }
 .intro-page-body .visible-container .content {
   font-family: Helvetica, sans-serif;
@@ -212,7 +220,7 @@ footer p {
   height: auto;
   top: 13%;
   left: 10%;
-  animation-delay: 2s;
+  animation-delay: 4s;
 }
 .intro-page-body .photo-spawner .car {
   z-index: 2;
@@ -220,7 +228,7 @@ footer p {
   height: auto;
   top: 7%;
   right: 3%;
-  animation-delay: 4s;
+  animation-delay: 6s;
 }
 .intro-page-body .photo-spawner .phoneview {
   z-index: 3;
@@ -228,7 +236,7 @@ footer p {
   height: auto;
   bottom: 10%;
   left: 22%;
-  animation-delay: 6s;
+  animation-delay: 8s;
 }
 .intro-page-body .photo-spawner .thumbnail {
   z-index: 4;
@@ -236,7 +244,7 @@ footer p {
   height: auto;
   bottom: 23%;
   left: -10%;
-  animation-delay: 8s;
+  animation-delay: 10s;
 }
 .intro-page-body .photo-spawner .old-photo {
   z-index: 5;
@@ -252,7 +260,7 @@ footer p {
   height: auto;
   bottom: 22%;
   left: 20%;
-  animation-delay: 12s;
+  animation-delay: 14s;
 }
 
 .stories-page-body {
