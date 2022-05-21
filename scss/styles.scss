@@ -728,6 +728,12 @@ footer {
 .unusual {
   background-image: url(../images/forsale.png);
 }
+.same-community {
+  background-image: url(../images/mobile.jpeg);
+}
+.buildings {
+  background-image: url(../images/multiply.png);
+}
 
 // story-page-styles
 .story-main {
@@ -749,6 +755,10 @@ footer {
         width: 100%;
         padding: 0 5%;
         margin-block: 20px;
+        span {
+          font-weight: 600;
+          font-style: italic;
+        }
       }
 
       .photo-description {
@@ -757,10 +767,6 @@ footer {
         white-space: initial;
         font-weight: 200;
         color: rgba(138, 138, 138, 1);
-        span {
-          font-weight: 600;
-          font-style: italic;
-        }
       }
       img {
         width: 100%;

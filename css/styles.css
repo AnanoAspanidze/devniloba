@@ -653,6 +653,14 @@ footer p {
   background-image: url(../images/forsale.png);
 }
 
+.same-community {
+  background-image: url(../images/mobile.jpeg);
+}
+
+.buildings {
+  background-image: url(../images/multiply.png);
+}
+
 .story-main {
   background: #141413;
 }
@@ -675,16 +683,16 @@ footer p {
   padding: 0 5%;
   margin-block: 20px;
 }
+.story-main .story article p span {
+  font-weight: 600;
+  font-style: italic;
+}
 .story-main .story article .photo-description {
   font-size: 14px;
   line-height: 20px;
   white-space: initial;
   font-weight: 200;
   color: rgb(138, 138, 138);
-}
-.story-main .story article .photo-description span {
-  font-weight: 600;
-  font-style: italic;
 }
 .story-main .story article img {
   width: 100%;
