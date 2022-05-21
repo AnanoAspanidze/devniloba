@@ -771,7 +771,21 @@ footer p {
   width: 650px;
 }
 
-.image-slide {
-  width: 200px;
-  height: 200px;
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease-in-out;
+}
+
+.is-visible .carousel-image {
+  filter: brightness(1);
+}
+
+.splide__arrow {
+  background-color: transparent !important;
+}
+.splide__arrow svg {
+  fill: white !important;
 }

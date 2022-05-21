@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/stylesheet.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       src="https://kit.fontawesome.com/ee5bf113f0.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/css/splide.min.css"
+    />
   </head>
   <body class="stories-page-body">
     <header class="header story-variant">
@@ -281,14 +284,33 @@
             their home is being built near the city of Khashuri.
           </p>
         </article>
-        <div class="slider">
-          <div>
-            <img src="images/slide-1.png" />
+        <section class="splide" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img
+                  class="carousel-image"
+                  src="images/car-story.jpeg"
+                  alt="story"
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  class="carousel-image"
+                  src="images/slide-story-2-min.jpeg"
+                  alt="slide-story-2"
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  class="carousel-image"
+                  src="images/slide-story-1-min.jpeg"
+                  alt="slide-story-1"
+                />
+              </li>
+            </ul>
           </div>
-          <div>
-            <img src="images/slide-2.png" />
-          </div>
-        </div>
+        </section>
         <article>
           <p class="photo-description">
             <span>Caption:</span> Misha Bejetashvili fled from Abkhazia with his
@@ -399,6 +421,7 @@
       </nav>
       <p>© Chaikhana, Inc. 2022. all rights reserved</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/js/splide.min.js"></script>
     <script src="script/app.js"></script>
   </body>
 </html>

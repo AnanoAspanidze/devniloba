@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const splide = new Splide('.splide', {
+    type: 'loop',
+    perMove: 1,
+    center: true,
+    width: '100%',
+    height: '40%',
+    padding: '20%',
+    gap: '2rem',
+    pagination: false,
+  })
+  splide.mount()
+})
+
 $(document).ready(() => {
   //   scroll on .scroll-area horizontally
   if ($(window).width() > 1500) {
