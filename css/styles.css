@@ -103,6 +103,12 @@ html {
   background-color: rgb(0, 75, 255);
 }
 
+.center-aligned {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -665,6 +671,10 @@ footer p {
   background-image: url(../images/multiply.png);
 }
 
+.bystander {
+  background-image: url(../images/bystander.jpg);
+}
+
 .story-main {
   background: #141413;
 }
@@ -712,7 +722,7 @@ footer p {
   font-size: 20px;
   font-family: "Helvetica", sans-serif;
   font-weight: 400;
-  color: rgb(138, 138, 138);
+  color: white;
   margin-block: 20px;
 }
 .story-main .other-stories article {
@@ -800,4 +810,234 @@ footer p {
 }
 .splide__arrow svg {
   fill: white !important;
+}
+
+.fisheye {
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, transparent 100%);
+}
+
+.banner {
+  position: relative;
+  width: 140%;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.dots .dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: #004bff;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: circle-inner 2s infinite ease-out;
+}
+
+.dots .dot:before {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #004bff;
+  position: absolute;
+  opacity: 0.3;
+  animation: circle-middle 2s infinite ease-out;
+  left: -12px;
+  top: -12px;
+}
+
+.dots .dot:after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #004bff;
+  position: absolute;
+  opacity: 0.3;
+  animation: circle-outer 2s infinite ease-out;
+  left: -25px;
+  top: -25px;
+}
+
+@keyframes circle-inner {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(1.5);
+  }
+}
+@keyframes circle-middle {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@keyframes circle-outer {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+.dots .dot-1 {
+  left: 36%;
+  top: 52%;
+}
+
+.dots .dot-2 {
+  left: 78%;
+  top: 70%;
+}
+
+.dots .dot-3 {
+  left: 66%;
+  top: 46%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  overflow: hidden;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.5);
+}
+
+.modal .modal-content {
+  position: absolute;
+  width: 60vw;
+  max-height: 80%;
+  top: 10%;
+  left: 20%;
+  background-color: black;
+  padding: 20px;
+  padding-bottom: 5%;
+  overflow-y: scroll;
+  border-radius: 5px;
+}
+
+.modal-content article figure {
+  position: relative;
+  margin: 10px 0;
+}
+
+.modal-article {
+  padding: 5% 65px !important;
+  position: relative;
+}
+.modal-article .title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.modal-article .title .blue-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #004bff;
+}
+.modal-article p {
+  padding: 0 !important;
+}
+
+.modal-content figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  padding: 17px;
+  background-color: rgba(33, 33, 33, 0.6);
+  color: #fff;
+}
+
+.modal-content article img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .dots .dot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dots .dot:before {
+    width: 45px;
+    height: 45px;
+    left: -7px;
+    top: -7px;
+  }
+
+  .dots .dot:after {
+    width: 60px;
+    height: 60px;
+    left: -15px;
+    top: -15px;
+  }
+}
+.modal-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #3a3a3a;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 5px;
+  background-color: #3a3a3a;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #004bff;
+}
+
+.modal-close {
+  position: fixed;
+  top: 13vh;
+  right: 21vw;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  color: #6e6f71;
+  outline: none;
+  transition: color 0.3s ease-in-out;
+}
+.modal-close:hover {
+  color: #004bff;
 }

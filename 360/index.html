@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Title</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
+    />
+    <style>
+      @-ms-viewport {
+        width: device-width;
+      }
+    </style>
+    <link rel="stylesheet" href="vendor/reset.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/ee5bf113f0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="multiple-scenes">
+    <header class="header fisheye">
+      <a class="logo" href="https://chaikhana.media/en">
+        <img src="../images/chaikhana-logo-white.svg" alt="logo" />
+      </a>
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li class="expandable-stories">
+              <a href="stories.html"
+                >stories<i class="fas fa-arrow-down"></i
+              ></a>
+              <a href="united.html">story 01</a>
+              <a href="unusual.html">story 02</a>
+              <a href="same-community.html">story 03</a>
+              <a href="buildings.html">story 04</a>
+              <a href="360/index.html">story 05</a>
+              <a href="#">story 06</a>
+            </li>
+            <a class="clickable" href="about.html">
+              <li>about</li>
+            </a>
+            <a class="clickable" href="/contact.html">
+              <li>contact</li>
+            </a>
+            <li class="lang-switcher">
+              <p>GE</p>
+              <a href="#">ENG</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="fisheye-container">
+      <div id="pano"></div>
+
+      <div id="sceneList">
+        <ul class="scenes">
+          <a href="javascript:void(0)" class="scene" data-id="0-courtyard">
+            <li class="text">Courtyard</li>
+          </a>
+
+          <a href="javascript:void(0)" class="scene" data-id="1-entrance">
+            <li class="text">Entrance</li>
+          </a>
+
+          <a href="javascript:void(0)" class="scene" data-id="2-ground-floor">
+            <li class="text">Ground Floor</li>
+          </a>
+
+          <a
+            href="javascript:void(0)"
+            class="scene"
+            data-id="3-turajs-door-and-a-corridor"
+          >
+            <li class="text">Turaj&#39;s Door and a Corridor</li>
+          </a>
+
+          <a href="javascript:void(0)" class="scene" data-id="4-kitchen-door">
+            <li class="text">Kitchen Door</li>
+          </a>
+
+          <a
+            href="javascript:void(0)"
+            class="scene"
+            data-id="5-corridor-towards-the-tea-room"
+          >
+            <li class="text">Corridor towards the tea room</li>
+          </a>
+
+          <a
+            href="javascript:void(0)"
+            class="scene"
+            data-id="6-the-way-to-the-tea-room"
+          >
+            <li class="text">The way to the tea-room</li>
+          </a>
+
+          <a href="javascript:void(0)" class="scene" data-id="7-kitchen">
+            <li class="text">Kitchen</li>
+          </a>
+
+          <a href="javascript:void(0)" class="scene" data-id="8-turajs-room">
+            <li class="text">Turaj&#39;s Room</li>
+          </a>
+
+          <a
+            href="javascript:void(0)"
+            class="scene"
+            data-id="9-the-tea-room-entrance"
+          >
+            <li class="text">The Tea Room Entrance</li>
+          </a>
+
+          <a href="javascript:void(0)" class="scene" data-id="10-tea-room">
+            <li class="text">Tea Room</li>
+          </a>
+
+          <a
+            href="javascript:void(0)"
+            class="scene"
+            data-id="11-third-floor-corridor"
+          >
+            <li class="text">Third Floor Corridor</li>
+          </a>
+
+          <a
+            href="javascript:void(0)"
+            class="scene"
+            data-id="12-firuzes-balcony"
+          >
+            <li class="text">Firuze&#39;s Balcony</li>
+          </a>
+
+          <a href="javascript:void(0)" class="scene" data-id="13-firuzes-room">
+            <li class="text">Firuze&#39;s Room</li>
+          </a>
+
+          <a href="javascript:void(0)" class="scene" data-id="14-bathroom">
+            <li class="text">Bathroom</li>
+          </a>
+        </ul>
+      </div>
+
+      <div id="titleBar">
+        <h1 class="sceneName"></h1>
+      </div>
+
+      <a href="javascript:void(0)" id="autorotateToggle">
+        <img class="icon off" src="img/play.png" />
+        <img class="icon on" src="img/pause.png" />
+      </a>
+
+      <a href="javascript:void(0)" id="fullscreenToggle">
+        <img class="icon off" src="img/fullscreen.png" />
+        <img class="icon on" src="img/windowed.png" />
+      </a>
+
+      <a href="javascript:void(0)" id="sceneListToggle">
+        <img class="icon off" src="img/expand.png" />
+        <img class="icon on" src="img/collapse.png" />
+      </a>
+
+      <a
+        href="javascript:void(0)"
+        id="viewUp"
+        class="viewControlButton viewControlButton-1"
+      >
+        <img class="icon" src="img/up.png" />
+      </a>
+      <a
+        href="javascript:void(0)"
+        id="viewDown"
+        class="viewControlButton viewControlButton-2"
+      >
+        <img class="icon" src="img/down.png" />
+      </a>
+      <a
+        href="javascript:void(0)"
+        id="viewLeft"
+        class="viewControlButton viewControlButton-3"
+      >
+        <img class="icon" src="img/left.png" />
+      </a>
+      <a
+        href="javascript:void(0)"
+        id="viewRight"
+        class="viewControlButton viewControlButton-4"
+      >
+        <img class="icon" src="img/right.png" />
+      </a>
+      <a
+        href="javascript:void(0)"
+        id="viewIn"
+        class="viewControlButton viewControlButton-5"
+      >
+        <img class="icon" src="img/plus.png" />
+      </a>
+      <a
+        href="javascript:void(0)"
+        id="viewOut"
+        class="viewControlButton viewControlButton-6"
+      >
+        <img class="icon" src="img/minus.png" />
+      </a>
+
+      <script src="vendor/screenfull.min.js"></script>
+      <script src="vendor/bowser.min.js"></script>
+      <script src="vendor/marzipano.js"></script>
+
+      <script src="data.js"></script>
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>
