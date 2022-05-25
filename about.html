@@ -17,7 +17,7 @@
   </head>
   <body class="about-body">
     <header class="header dark-header">
-      <a class="logo" href="https://chaikhana.media/en">
+      <a class="logo" href="https://chaikhana.media/en" target="_blank">
         <img src="images/chaikhana-logo-white.svg" alt="logo" />
       </a>
       <div class="nav-container">
@@ -35,8 +35,8 @@
               <a href="#">story 06</a>
             </li>
             <li class="active">about</li>
-            <a class="clickable" href="/contact.html">
-              <li>contact</li>
+            <a class="clickable" href="credits.html">
+              <li>credits</li>
             </a>
             <li class="lang-switcher">
               <p>GE</p>
@@ -60,7 +60,7 @@
       </p>
     </main>
     <footer class="footer about-footer">
-      <a href="https://chaikhana.media/en"
+      <a href="https://chaikhana.media/en" target="_blank"
         ><img src="images/chaikhana-logo-dark.svg" alt="chaikhana logo"
       /></a>
       <nav class="footer-nav">
@@ -68,13 +68,19 @@
           <li>
             <a href="stories.html">stories</a>
           </li>
-          <li class="active">about</li>
+          <li><a href="#" class="active">about</a></li>
           <li>
             <a href="credits.html">credits</a>
           </li>
         </ul>
       </nav>
-      <p>© Chaikhana, Inc. 2022. all rights reserved</p>
+      <p>
+        © Chai khana, Inc.
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        . all rights reserved
+      </p>
     </footer>
   </body>
 </html>

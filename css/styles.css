@@ -137,6 +137,7 @@ header .nav-container nav ul li {
   border: 1px solid transparent;
   border-radius: 30px;
   cursor: pointer;
+  color: white;
 }
 header .nav-container nav ul li a {
   color: rgb(110, 111, 113);
@@ -154,6 +155,9 @@ header .nav-container nav ul li a {
 header .nav-container nav ul li a .fa-arrow-down {
   transition: color 0.2s ease-out, transform 0.2s ease-in-out;
 }
+header .nav-container nav ul li :first-child {
+  color: white;
+}
 header .nav-container nav ul li:hover a .fa-arrow-down {
   transform: rotateZ(180deg);
 }
@@ -164,7 +168,7 @@ header .nav-container nav ul li:hover :first-child {
   color: white;
 }
 header .nav-container nav ul .clickable li {
-  color: rgb(110, 111, 113);
+  color: white;
   font-family: Helvetica, sans-serif;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
@@ -182,6 +186,11 @@ header .nav-container nav ul .expandable-stories {
   top: 0;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
+}
+header .nav-container nav ul .expandable-stories a {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 header .nav-container nav ul .expandable-stories a:not(:first-child) {
   margin-block: 7px;
@@ -213,6 +222,9 @@ header .nav-container nav ul .lang-switcher a {
   font-weight: 400;
   color: rgb(110, 111, 113);
   transition: all 0.3s ease-in-out;
+}
+header .nav-container nav ul .lang-switcher :first-child {
+  color: white;
 }
 header .nav-container nav ul .lang-switcher a {
   margin-top: 22px;
@@ -390,7 +402,6 @@ footer p {
   animation-delay: 10s;
 }
 .intro-page-body .photo-spawner .old-photo {
-  z-index: 5;
   width: 37vw;
   height: auto;
   bottom: 30%;
@@ -463,19 +474,19 @@ footer p {
   left: 88%;
 }
 .stories-page-body .canvas .scroll-area .top-stories .news-folded .content .story-label .indicator-horizontal {
-  background-color: black;
+  background-color: #6e6f71;
   position: absolute;
   right: 188px;
 }
 .stories-page-body .canvas .scroll-area .top-stories .news-folded .content .story-label .indicator-horizontal:before {
-  background-color: black;
+  background-color: #6e6f71;
 }
 .stories-page-body .canvas .scroll-area .top-stories .news-folded .content .story-label p {
   margin: 0;
   margin-top: 2px;
   bottom: 0;
   left: 110%;
-  color: black;
+  color: #6e6f71;
   transform: translateY(-50%);
 }
 .stories-page-body .canvas .scroll-area .top-stories .news-folded .content .story-header {
@@ -500,7 +511,7 @@ footer p {
   margin-top: -18%;
 }
 .stories-page-body .canvas .scroll-area .middle-stories .old-photo {
-  z-index: 3;
+  z-index: 999;
   position: relative;
   width: 35%;
   margin-top: 140px;
@@ -668,7 +679,7 @@ footer p {
 }
 
 .buildings {
-  background-image: url(../images/multiply.png);
+  background-image: url(../images/Thumbnail.jpeg);
 }
 
 .bystander {

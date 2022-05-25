@@ -133,6 +133,7 @@ header {
       border: 1px solid transparent;
       border-radius: 30px;
       cursor: pointer;
+      color: white;
 
       a {
         color: rgba(110, 111, 113, 1);
@@ -147,6 +148,9 @@ header {
         .fa-arrow-down {
           transition: color 0.2s ease-out, transform 0.2s ease-in-out;
         }
+      }
+      :first-child {
+        color: white;
       }
 
       &:hover {
@@ -166,7 +170,7 @@ header {
 
     .clickable {
       li {
-        color: rgba(110, 111, 113, 1);
+        color: white;
         font-family: Helvetica, sans-serif;
         font-size: 16px;
         transition: all 0.3s ease-in-out;
@@ -191,6 +195,9 @@ header {
       overflow: hidden;
       transition: height 0.3s ease-in-out;
       a {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         &:not(:first-child) {
           margin-block: 7px;
         }
@@ -225,6 +232,9 @@ header {
         font-weight: 400;
         color: rgba(110, 111, 113, 1);
         transition: all 0.3s ease-in-out;
+      }
+      :first-child {
+        color: white;
       }
 
       a {
@@ -422,7 +432,6 @@ footer {
     }
 
     .old-photo {
-      z-index: 5;
       width: 37vw;
       height: auto;
       bottom: 30%;
@@ -503,11 +512,11 @@ footer {
               bottom: 47%;
               left: 88%;
               .indicator-horizontal {
-                background-color: black;
+                background-color: #6e6f71;
                 position: absolute;
                 right: 188px;
                 &:before {
-                  background-color: black;
+                  background-color: #6e6f71;
                 }
               }
 
@@ -516,7 +525,7 @@ footer {
                 margin-top: 2px;
                 bottom: 0;
                 left: 110%;
-                color: black;
+                color: #6e6f71;
                 transform: translateY(-50%);
               }
             }
@@ -548,7 +557,7 @@ footer {
         margin-top: -18%;
 
         .old-photo {
-          z-index: 3;
+          z-index: 999;
           position: relative;
           width: 35%;
           margin-top: 140px;
@@ -740,7 +749,7 @@ footer {
   background-image: url(../images/mobile.jpeg);
 }
 .buildings {
-  background-image: url(../images/multiply.png);
+  background-image: url(../images/Thumbnail.jpeg);
 }
 
 .bystander {
