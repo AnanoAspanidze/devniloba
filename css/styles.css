@@ -16,6 +16,54 @@ html {
   margin-bottom: 20px;
 }
 
+.lang-switcher {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 15px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  right: -15px;
+  transform: translateX(100%);
+}
+.lang-switcher p,
+.lang-switcher a {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(110, 111, 113);
+  transition: all 0.3s ease-in-out;
+}
+.lang-switcher :first-child {
+  color: white;
+}
+.lang-switcher a {
+  margin-top: 22px;
+}
+.lang-switcher a:hover {
+  color: white;
+}
+.lang-switcher a:active {
+  color: rgb(0, 75, 255) !important;
+}
+.lang-switcher:hover {
+  height: 97px;
+}
+
+.intro-lang-switcher {
+  right: 3%;
+  top: 3%;
+  transform: translateX(0);
+  background: #0e141b;
+  padding: 20px 30px;
+  height: 58px;
+  background-color: rgb(38, 43, 50);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25);
+  border: 1px solid transparent;
+  border-radius: 30px;
+}
+
 .dissapear {
   opacity: 0 !important;
   background-color: transparent;
@@ -203,40 +251,6 @@ header .nav-container nav ul .expandable-stories a:hover:not(:first-child) {
 }
 header .nav-container nav ul .expandable-stories:hover {
   height: 216px;
-}
-header .nav-container nav ul .lang-switcher {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-inline: 15px;
-  transition: all 0.3s ease-in-out;
-  position: absolute;
-  right: -15px;
-  transform: translateX(100%);
-}
-header .nav-container nav ul .lang-switcher p,
-header .nav-container nav ul .lang-switcher a {
-  font-family: Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: rgb(110, 111, 113);
-  transition: all 0.3s ease-in-out;
-}
-header .nav-container nav ul .lang-switcher :first-child {
-  color: white;
-}
-header .nav-container nav ul .lang-switcher a {
-  margin-top: 22px;
-}
-header .nav-container nav ul .lang-switcher a:hover {
-  color: white;
-}
-header .nav-container nav ul .lang-switcher a:active {
-  color: rgb(0, 75, 255) !important;
-}
-header .nav-container nav ul .lang-switcher:hover {
-  height: 97px;
 }
 
 .dark-header {
@@ -709,6 +723,12 @@ footer p {
   margin-block: 20px;
 }
 .story-main .story article p span {
+  font-weight: 600;
+  font-style: italic;
+}
+.story-main .story article p a {
+  color: #004bff;
+  text-decoration: none;
   font-weight: 600;
   font-style: italic;
 }
