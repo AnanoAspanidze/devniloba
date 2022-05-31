@@ -179,7 +179,7 @@ header .nav-container nav ul {
 header .nav-container nav ul li {
   background: #0e141b;
   padding: 20px 30px;
-  height: 58px;
+  height: 56px;
   background-color: rgb(38, 43, 50);
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25);
   border: 1px solid transparent;
@@ -203,7 +203,7 @@ header .nav-container nav ul li a {
 header .nav-container nav ul li a .fa-arrow-down {
   transition: color 0.2s ease-out, transform 0.2s ease-in-out;
 }
-header .nav-container nav ul li :first-child {
+header .nav-container nav ul li > :first-child {
   color: white;
 }
 header .nav-container nav ul li:hover a .fa-arrow-down {
@@ -211,9 +211,6 @@ header .nav-container nav ul li:hover a .fa-arrow-down {
 }
 header .nav-container nav ul li:hover a:active {
   color: rgb(0, 75, 255) !important;
-}
-header .nav-container nav ul li:hover :first-child {
-  color: white;
 }
 header .nav-container nav ul .clickable li {
   color: white;
@@ -235,22 +232,25 @@ header .nav-container nav ul .expandable-stories {
   overflow: hidden;
   transition: height 0.3s ease-in-out;
 }
-header .nav-container nav ul .expandable-stories a {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-header .nav-container nav ul .expandable-stories a:not(:first-child) {
-  margin-block: 7px;
-}
-header .nav-container nav ul .expandable-stories a:nth-child(2) {
-  margin-top: 22px;
-}
-header .nav-container nav ul .expandable-stories a:hover:not(:first-child) {
+header .nav-container nav ul .expandable-stories a:hover {
   color: white;
 }
 header .nav-container nav ul .expandable-stories:hover {
-  height: 216px;
+  height: 226px;
+}
+header .nav-container nav ul .expandable-stories div {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-start !important;
+  flex-direction: column;
+}
+header .nav-container nav ul .expandable-stories div a {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  display: inline-block;
+  margin-block: 5px;
 }
 
 .dark-header {
@@ -276,7 +276,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 130px;
+  padding: 70px 130px;
   background: white;
   z-index: 99999;
 }
@@ -744,7 +744,7 @@ footer p {
 }
 .story-main .other-stories {
   width: 100%;
-  padding: 5% 10% 240px 10%;
+  padding: 5% 10% 120px 10%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1016,6 +1016,7 @@ footer p {
 
 .modal-content article img {
   width: 100%;
+  height: 410px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1071,4 +1072,82 @@ footer p {
 }
 .modal-close:hover {
   color: #004bff;
+}
+
+.dot-label {
+  position: absolute;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dot-label p {
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  padding: 0 !important;
+}
+.dot-label p span {
+  font-style: normal !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  font-size: 16px !important;
+  transform: translateX(-110%);
+  font-weight: 400;
+  display: inline-block;
+  transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.dot-label p span::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: white;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateY(1px);
+  margin-right: 15px;
+  margin-bottom: 1px;
+}
+.dot-label p::before {
+  border-radius: 50%;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  display: inline-block;
+}
+
+.data-target-1 {
+  left: 41%;
+  top: 50%;
+}
+
+.data-target-2 {
+  left: 83%;
+  top: 68%;
+}
+
+.data-target-3 {
+  left: 71%;
+  top: 44%;
+}
+
+.dot-1:hover ~ .data-target-1 p span,
+.dot-2:hover ~ .data-target-2 p span,
+.dot-3:hover ~ .data-target-3 p span {
+  transform: translateX(0);
+}
+
+.dot-1:hover ~ .data-target-1 p,
+.dot-2:hover ~ .data-target-2 p,
+.dot-3:hover ~ .data-target-3 p {
+  opacity: 1;
+}
+
+.nav-active-item {
+  color: white !important;
+  cursor: default;
 }
