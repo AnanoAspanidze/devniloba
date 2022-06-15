@@ -1208,3 +1208,9 @@ footer p {
 .disclaimer span {
   color: #4c81ff;
 }
+
+.fisheye-footer {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(80%);
+}
