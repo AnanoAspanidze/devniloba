@@ -133,6 +133,7 @@ html {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
+  position: relative;
   gap: 20px;
 }
 .story-header h6 {
@@ -150,6 +151,15 @@ html {
 .story-header a:hover {
   background-color: rgb(0, 75, 255);
 }
+.story-header .bw-image {
+  transform: scale(2) translate(0px, 35%);
+  z-index: 2 !important;
+}
+@media (max-width: 1440px) {
+  .story-header .bw-image {
+    transform: scale(1.8) translate(-5px, 35%);
+  }
+}
 
 .center-aligned {
   display: flex;
@@ -166,6 +176,18 @@ header {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.56) 0%, transparent 100%);
   z-index: 99999;
   position: relative;
+}
+header .logo-container {
+  display: flex;
+  gap: 60px;
+  color: white;
+  align-items: center;
+}
+header .logo-container h6 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
 }
 header .nav-container nav ul {
   display: flex;
@@ -216,13 +238,14 @@ header .nav-container nav ul .clickable li {
   color: white;
   font-family: Helvetica, sans-serif;
   font-size: 16px;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 header .nav-container nav ul .clickable:active li {
   color: rgb(0, 75, 255) !important;
 }
 header .nav-container nav ul .clickable:hover li {
   color: white;
+  background-color: #004bff;
 }
 header .nav-container nav ul .expandable-stories {
   left: -15px;
@@ -607,6 +630,8 @@ footer p {
 }
 .stories-page-body .canvas .scroll-area .bottom-stories .iphone img {
   width: 50%;
+  z-index: 3;
+  position: relative;
 }
 .stories-page-body .canvas .scroll-area .bottom-stories .iphone .content {
   margin-top: -15%;
@@ -645,9 +670,10 @@ footer p {
 .about-main {
   background: #141413;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-block: 200px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 200px 0 100px 0;
   width: 100%;
 }
 .about-main p {
@@ -657,6 +683,15 @@ footer p {
   line-height: 35px;
   white-space: pre-line;
   font-weight: 200;
+}
+.about-main .disclaimer {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 40px;
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 300;
+  color: rgb(138, 138, 138);
 }
 
 .credits {
@@ -701,7 +736,7 @@ footer p {
 }
 
 .story-main {
-  background: #141413;
+  background: #fff;
 }
 .story-main .story {
   display: flex;
@@ -713,7 +748,7 @@ footer p {
   padding: 10px 25%;
 }
 .story-main .story article p {
-  color: rgb(210, 210, 209);
+  color: #3f3f3f;
   line-height: 34px;
   font-family: "Helvetica", sans-serif;
   font-weight: 400;
@@ -729,7 +764,6 @@ footer p {
 .story-main .story article p a {
   color: #004bff;
   text-decoration: none;
-  font-weight: 600;
   font-style: italic;
 }
 .story-main .story article .photo-description {
@@ -777,7 +811,7 @@ footer p {
   font-family: "Helvetica", sans-serif;
   font-weight: 700;
   margin-top: 7px;
-  color: rgb(232, 232, 232);
+  color: #3f3f3f;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -1016,6 +1050,9 @@ footer p {
 
 .modal-content article img {
   width: 100%;
+}
+
+.carousel-image {
   height: 410px;
 }
 
@@ -1076,12 +1113,12 @@ footer p {
 
 .dot-label {
   position: absolute;
-  color: white;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .dot-label p {
+  color: white !important;
   transition: 0.3s ease-in-out;
   opacity: 0;
   padding: 0 !important;
@@ -1150,4 +1187,22 @@ footer p {
 .nav-active-item {
   color: white !important;
   cursor: default;
+}
+
+.disclaimer {
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-inline: auto;
+  max-width: 710px;
+  padding: 20px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 22px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  color: rgb(138, 138, 138);
+}
+.disclaimer span {
+  color: #4c81ff;
 }
