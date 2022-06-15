@@ -27,7 +27,6 @@ body {
   font-size: 16px;
   background-color: rgb(30, 30, 30);
   color: #fff;
-  overflow-y: scroll;
 }
 
 header {
