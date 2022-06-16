@@ -344,13 +344,14 @@ footer p {
   gap: 30px;
   opacity: 0;
   align-items: center;
-  padding: 50px 25%;
+  padding: 50px 20%;
   animation: opacity-0-to-1 3s;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
-  -moz-animation: opacity-0-to-1 2s;
-  -webkit-animation: opacity-0-to-1 2s;
+  -moz-animation: opacity-0-to-1 3s;
+  -webkit-animation: opacity-0-to-1 3s;
+  -webkit-animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
 }
 .intro-page-body .visible-container .content {
@@ -361,6 +362,20 @@ footer p {
   font-style: italic;
   line-height: 24px;
   font-weight: 700;
+  cursor: default;
+}
+.intro-page-body .visible-container p .late {
+  font-size: 1rem;
+  opacity: 0;
+  animation: opacity-0-to-1 3s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation: opacity-0-to-1 4s;
+  -webkit-animation: opacity-0-to-1 4s;
+  -webkit-animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  line-height: 1.2;
 }
 .intro-page-body .see-more {
   display: flex;
@@ -412,7 +427,7 @@ footer p {
   height: auto;
   top: 13%;
   left: 10%;
-  animation-delay: 4s;
+  animation-delay: 6s;
 }
 .intro-page-body .photo-spawner .car {
   z-index: 2;
@@ -420,7 +435,7 @@ footer p {
   height: auto;
   top: 7%;
   right: 3%;
-  animation-delay: 6s;
+  animation-delay: 8s;
 }
 .intro-page-body .photo-spawner .phoneview {
   z-index: 3;
@@ -428,7 +443,7 @@ footer p {
   height: auto;
   bottom: 10%;
   left: 22%;
-  animation-delay: 8s;
+  animation-delay: 10s;
 }
 .intro-page-body .photo-spawner .thumbnail {
   z-index: 4;
@@ -436,14 +451,14 @@ footer p {
   height: auto;
   bottom: 23%;
   left: -10%;
-  animation-delay: 10s;
+  animation-delay: 12s;
 }
 .intro-page-body .photo-spawner .old-photo {
   width: 37vw;
   height: auto;
   bottom: 30%;
   left: 5%;
-  animation-delay: 12s;
+  animation-delay: 14s;
 }
 .intro-page-body .photo-spawner .fisheye {
   z-index: 6;
@@ -451,7 +466,7 @@ footer p {
   height: auto;
   bottom: 22%;
   left: 20%;
-  animation-delay: 14s;
+  animation-delay: 16s;
 }
 
 .stories-page-body {
