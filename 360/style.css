@@ -625,6 +625,10 @@ body.single-scene #sceneListToggle {
     transform 0.3s 0.3s, visibility 0s 0s;
 }
 
+.desktop .info-hotspot.visible .info-hotspot-text span {
+  color: white !important;
+}
+
 /* Info hotspot modal */
 
 .desktop .info-hotspot-modal {

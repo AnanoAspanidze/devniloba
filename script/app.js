@@ -33,6 +33,16 @@ function registerListeners() {
       showModal(e.target.dataset.target),
     )
   })
+
+  document.querySelectorAll('.modal-close').forEach((dotElement) => {
+    dotElement.addEventListener('click', () => hideAllModals())
+  })
+
+  document.querySelectorAll('#continue').forEach((dotElement) => {
+    dotElement.addEventListener('click', () => hideAllModals())
+  })
+
+  showModal(5)
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -82,6 +92,11 @@ $(document).ready(() => {
   })
 
   $('.modal-close').click(() => {
+    hideAllModals()
+  })
+
+  $('#continue').click(() => {
+    console.log('clicked')
     hideAllModals()
   })
 })

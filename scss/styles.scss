@@ -16,6 +16,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 .bottom-20px {
   margin-bottom: 20px;
 }
@@ -179,7 +180,8 @@ header {
 
   .logo-container {
     display: flex;
-    gap: 60px;
+    gap: 3%;
+    width: 100%;
     color: white;
     align-items: center;
     h6 {
@@ -361,7 +363,7 @@ footer {
     position: absolute;
     background-image: linear-gradient(
       rgba(34, 34, 34, 0.8),
-      rgba(34, 34, 34, 0.2)
+      rgba(34, 34, 34, 0.3)
     );
     z-index: 9999;
     width: 100vw;
@@ -485,6 +487,7 @@ footer {
     }
 
     .old-photo {
+      z-index: 5;
       width: 37vw;
       height: auto;
       bottom: 30%;
@@ -831,6 +834,12 @@ footer {
     flex-direction: column;
     padding: 0;
 
+    br {
+      content: '';
+      display: block;
+      margin: 1em;
+    }
+
     article {
       padding: 10px 25%;
       p {
@@ -1148,8 +1157,54 @@ footer {
     }
   }
 
+  .displaced {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
   p {
     padding: 0 !important;
+    color: #3f3f3f;
+    line-height: 34px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    width: 100%;
+    margin-block: 20px;
+  }
+
+  .continue {
+    display: flex;
+    justify-content: center;
+    button {
+      margin: 0 auto;
+      border: none;
+      border-radius: 14px;
+      background: #4f4f4f;
+      color: white;
+      font-family: 'Helvetica', sans-serif;
+      padding: 25px 60px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        background: #004bff;
+      }
+    }
+  }
+}
+
+.displaced-modal {
+  padding-bottom: 2% !important;
+
+  .displaced-article {
+    padding-block: 2% !important;
   }
 }
 

@@ -22,9 +22,15 @@
   </head>
   <body class="multiple-scenes">
     <header class="header fisheye">
-      <a class="logo" href="https://chaikhana.media/en">
-        <img src="../images/chaikhana-logo-white.svg" alt="logo" />
-      </a>
+      <div class="logo-container">
+        <a class="logo" href="../stories.html">
+          <img src="../images/chaikhana-logo-white.svg" alt="logo" />
+        </a>
+        <h6>
+          Stories of displacement: <br />
+          The fate of three generations after decades of conflict
+        </h6>
+      </div>
       <div class="nav-container">
         <nav>
           <ul>
@@ -34,11 +40,11 @@
               ></a>
               <div>
                 <a href="../IDPs-in-Georgia.html"
-                  >IDPs in Georgia: United by Displacement, Divided by
-                  Circumstance</a
+                  >IDPs in Georgia: United by displacement, divided by
+                  circumstance</a
                 >
                 <a href="../Death-in-displacement.html"
-                  >Death in Displacement: the Unusual Case of Vedzisi
+                  >Death in displacement: The unusual case of Vedzisi
                   Cemetery</a
                 >
                 <a href="#"
@@ -70,6 +76,54 @@
         </nav>
       </div>
     </header>
+    <div class="modal" data-id="5">
+      <div class="backdrop">
+        <div class="modal-content displaced-modal">
+          <article class="modal-article displaced-article">
+            <i class="fa-solid fa-x modal-close"></i>
+            <div class="title displaced">
+              <p>A day in the life:</p>
+              <h4>How the displaced live in Azerbaijan</h4>
+              <p>by: Leyla Bagirli | Elmira Azizkhanli</p>
+            </div>
+            <p>
+              For nearly 30 years, hundreds of thousands of displaced
+              Azerbaijanis (IDP) have lived in dormitories and other “temporary
+              housing'' in the capital, Baku, and other cities throughout the
+              country. They settled in the buildings, tent camps, railway cars
+              and other structures during the 1988-1994 Armenia-Azerbaijan war,
+              which displaced a reported 1.14 million ethnic Azerbaijanis from
+              Nagorno-Karabakh and Armenia.
+              <br /><br />
+              Over a 20-year period, from 1993 to 2013, the Azerbaijani
+              government has spent a reported $ 5.5 to improve the lives of
+              Azerbaijanis displaced during the war–$2.5 billion is from the
+              state budget, $1.9 billion from the State Oil Fund and $1.1
+              billion from international humanitarian organizations. Today, 49
+              international and 43 local humanitarian organizations provide
+              assistance to refugees, IDPs and low-income people in Azerbaijan.
+              <br /><br />
+              Despite those efforts, it is estimated that over 300,000
+              Azerbaijanis still live in buildings that were never intended to
+              serve as housing. Multigenerational families have celebrated
+              births, marriages and deaths in single room quarters with thin
+              walls, no privacy and zero amenities.
+              <br /><br />
+              The challenges the people living in these settlements face on a
+              daily basis are nearly impossible to imagine if you do not
+              experience yourself. Using photographs, illustrations and
+              interviews, Chai Khana has created an interactive, 360-degree
+              model of one settlement in Baku, the Dormitory 1 of the Azerbaijan
+              University of Languages. Click through the guided tour and
+              experience a day in the life of a displaced person in Baku.
+            </p>
+            <div class="continue">
+              <button id="continue">continue</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
     <div class="fisheye-container">
       <div id="pano"></div>
 
@@ -255,5 +309,6 @@
         </p>
       </footer> -->
     </div>
+    <script src="../script/app.js"></script>
   </body>
 </html>
