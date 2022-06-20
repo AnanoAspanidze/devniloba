@@ -129,3 +129,9 @@ $(document).ready(() => {
 //       $('.header').removeClass('dissapear')
 //     }
 //   })
+
+const disableClick = () => {
+  $('a').click(function (e) {
+    e.preventDefault()
+  })
+}
