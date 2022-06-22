@@ -410,6 +410,9 @@ footer {
     -webkit-animation: opacity-0-to-1 3s;
     -webkit-animation-delay: 1s;
     -webkit-animation-fill-mode: forwards;
+    @media (max-width: 1366px) {
+      padding: 50px 10%;
+    }
 
     .content {
       @include intro-text-styles();
@@ -417,7 +420,7 @@ footer {
     }
 
     p .late {
-      font-size: 1rem;
+      font-size: 0.9rem;
       opacity: 0;
       animation: opacity-0-to-1 3s;
       animation-delay: 4s;
